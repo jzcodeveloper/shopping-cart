@@ -1,34 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Shopping Cart
 
-## Getting Started
+## Overview
 
-First, run the development server:
+> An e-commerce application
 
-```bash
+[Shopping Cart](https://example.com) is an e-commerce application where you can browse a list of products and add them to your cart.
+
+## Quick Start
+
+### Clone this repository
+
+To get started clone this repository:
+
+```
+git clone https://github.com/jzcodeveloper/shopping-cart.git
+```
+
+### Install dependencies
+
+Install required modules by executing
+
+```
+npm install
+# or
+yarn install
+```
+
+### Run locally for development
+
+```
 npm run dev
 # or
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Build for production
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+If you want to run this site on production, you need to build the project with `npm run build` and then run it with `npm start`:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.tsx`.
+```
+npm run build
+npm start
+# or
+yarn build
+yarn start
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## App Info
 
-## Learn More
+### Author
 
-To learn more about Next.js, take a look at the following resources:
+JZCodeveloper
+[JZCodeveloper](https://jz-web-developer.herokuapp.com)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Version
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1.0.0
 
-## Deploy on Vercel
+### License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the MIT License.
