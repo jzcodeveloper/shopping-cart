@@ -1,8 +1,3 @@
-export interface Product {
-  id: number;
-  name: string;
-  cover: string;
-  price: string;
-}
+export type EmptyObject = Record<string, never>;
 
 export type Nullable<T> = T | null;
