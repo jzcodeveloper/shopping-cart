@@ -1,6 +1,7 @@
 import React from "react";
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 import ProductItem from "../product-item";
+import { Product } from "../../contexts/cart/types";
 
 interface Props {
   products: Product[];

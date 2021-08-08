@@ -1,5 +1,6 @@
 import React from "react";
-import { Product, CartMap } from "./types";
+import { ActionPayload } from "../../@types";
+import { Product, CartState } from "./types";
 import { CART_ACTIONS } from "./values";
 
 // set initial state
@@ -8,10 +9,6 @@ export const setInitialState = (state: CartState) => ({
   payload: state,
 });
 export type SetInitialState = ReturnType<typeof setInitialState>;
-
-// reset items
-export const resetItems = () => ({ type: CART_ACTIONS.RESET_ITEMS });
-export type ResetItems = ReturnType<typeof resetItems>;
 
 // add item
 export const addItem = (item: Product) => ({
@@ -27,17 +24,47 @@ export const removeItem = (item: Product) => ({
 });
 export type RemoveItem = ReturnType<typeof removeItem>;
 
-// available actions
-export type Actions = SetInitialState | ResetItems | AddItem | RemoveItem;
+// clear item
+export const clearItem = (item: Product) => ({
+  type: CART_ACTIONS.CLEAR_ITEM,
+  payload: item,
+});
+export type ClearItem = ReturnType<typeof clearItem>;
+
+// clear items
+export const clearItems = () => ({
+  type: CART_ACTIONS.CLEAR_ITEMS,
+  payload: undefined,
+});
+export type ClearItems = ReturnType<typeof clearItems>;
+
+// toggle cart
+export const toggleCart = () => ({
+  type: CART_ACTIONS.TOGGLE_CART,
+  payload: undefined,
+});
+export type ToggleCart = ReturnType<typeof toggleCart>;
+
+export type Actions =
+  | ToggleCart
+  | SetInitialState
+  | AddItem
+  | RemoveItem
+  | ClearItem
+  | ClearItems;
 
 // we can handle async actions here
-export const cartActions = (dispatch: React.Dispatch<Actions>) => ({
+export const cartActions = (dispatch: React.Dispatch<ActionPayload>) => ({
   // set state
   setInitialState: (state: CartState) => dispatch(setInitialState(state)),
-  // reset items
-  resetItems: () => dispatch(resetItems()),
   // add item
   addItem: (item: Product) => dispatch(addItem(item)),
   // remove item
   removeItem: (item: Product) => dispatch(removeItem(item)),
+  // clear item
+  clearItem: (item: Product) => dispatch(clearItem(item)),
+  // clear items
+  clearItems: () => dispatch(clearItems()),
+  // toggle cart
+  toggleCart: () => dispatch(toggleCart()),
 });

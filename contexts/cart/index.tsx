@@ -5,7 +5,7 @@ import { CartState } from "./types";
 import { cartReducer } from "./reducer";
 import { INITIAL_STATE, STORAGE_KEY } from "./values";
 
-const CartContext = React.createContext<CartState>(INITIAL_STATE);
+const CartContext = React.createContext<any>(undefined);
 
 interface Props {
   children: React.ReactNode;
@@ -45,8 +45,15 @@ export const useCart = () => {
 };
 
 // similar to redux useSelector
-export const useCartSelector = (selector) => {
-  const [state] = useContext(CartContext);
+export const useCartSelector = (selector: any) => {
+  const context = useContext(CartContext);
 
-  return selector(state);
+  return selector(context[0]);
+};
+
+// similar to redux useDispatch
+export const useCartDispatch = () => {
+  const context = useContext(CartContext);
+
+  return context[1];
 };

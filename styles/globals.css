@@ -19,13 +19,32 @@ a {
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
+.zoom-in {
+  animation: zoom-in-animation 0.25s ease-in-out forwards;
+}
 
-  @variants responsive {
-    /* */
+.zoom-out {
+  animation: zoom-out-animation 0.25s ease-in-out forwards;
+}
+
+@keyframes zoom-in-animation {
+  from {
+    transform: scale(0);
+    opacity: 0;
   }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 
-  @variants hover, focus {
-    /* */
+@keyframes zoom-out-animation {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0);
+    opacity: 0;
   }
 }

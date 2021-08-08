@@ -35,7 +35,7 @@ Home.propTypes = {
   ).isRequired,
 };
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   const products: Product[] = await getProducts();
 
   return {
