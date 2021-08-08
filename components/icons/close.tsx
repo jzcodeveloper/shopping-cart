@@ -5,7 +5,7 @@ interface Props {
   className?: string;
 }
 
-function CartIcon({ className }: Props) {
+function CloseIcon({ className }: Props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -18,18 +18,18 @@ function CartIcon({ className }: Props) {
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={2}
-        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+        d="M6 18L18 6M6 6l12 12"
       />
     </svg>
   );
 }
 
-CartIcon.defaultProps = {
+CloseIcon.defaultProps = {
   className: "h-6 w-6",
 };
 
-CartIcon.propTypes = {
+CloseIcon.propTypes = {
   className: PropTypes.string,
 };
 
-export default CartIcon;
+export default CloseIcon;

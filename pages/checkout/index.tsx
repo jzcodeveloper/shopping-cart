@@ -1,8 +1,11 @@
 import React from "react";
-import { useCart } from "../../contexts/cart";
+import Head from "next/head";
+import { useCartSelector } from "../../contexts/cart";
+import { selectCartItems } from "../../contexts/cart/selectors";
+import CheckoutItems from '../../components/checkout-items'
 
 function Checkout() {
-  const [state, actions] = useCart();
+  const items = useCartSelector(selectCartItems);
 
   return (
     <>
@@ -13,6 +16,7 @@ function Checkout() {
           content="Review your selected products and process your payment."
         />
       </Head>
+      <CheckoutItems items={items} />
     </>
   );
 }

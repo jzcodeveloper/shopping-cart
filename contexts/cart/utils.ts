@@ -1,4 +1,5 @@
 import _ from "lodash";
+import { CartMap, Product } from "./types";
 
 /**
  * @param {CartMap} cart
@@ -30,6 +31,19 @@ export const removeCartItem = (cart: CartMap, item: Product) => {
   } else {
     newCart[item.id].quantity--;
   }
+
+  return newCart;
+};
+
+/**
+ * @param {CartMap} cart
+ * @param {Product} item
+ * @returns {CartMap}
+ */
+export const clearCartItem = (cart: CartMap, item: Product) => {
+  const newCart = _.cloneDeep(cart);
+
+  delete newCart[item.id];
 
   return newCart;
 };

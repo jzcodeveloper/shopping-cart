@@ -1,4 +1,4 @@
-import { Nullable, EmptyObject } from "../../../@types";
+import { EmptyObject } from "../../@types";
 
 export interface Product {
   id: number;
@@ -17,4 +17,5 @@ export interface CartMap {
 
 export interface CartState {
   items: CartMap | EmptyObject;
+  expanded: boolean;
 }
