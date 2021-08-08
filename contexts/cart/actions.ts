@@ -2,12 +2,12 @@ import React from "react";
 import { Product, CartMap } from "./types";
 import { CART_ACTIONS } from "./values";
 
-// set items
-export const setItems = (items: CartMap) => ({
-  type: CART_ACTIONS.SET_IEMS,
-  payload: items,
+// set initial state
+export const setInitialState = (state: CartState) => ({
+  type: CART_ACTIONS.SET_INITIAL_STATE,
+  payload: state,
 });
-export type SetItems = ReturnType<typeof setItems>;
+export type SetInitialState = ReturnType<typeof setInitialState>;
 
 // reset items
 export const resetItems = () => ({ type: CART_ACTIONS.RESET_ITEMS });
@@ -28,12 +28,12 @@ export const removeItem = (item: Product) => ({
 export type RemoveItem = ReturnType<typeof removeItem>;
 
 // available actions
-export type Actions = SetItems | ResetItems | AddItem | RemoveItem;
+export type Actions = SetInitialState | ResetItems | AddItem | RemoveItem;
 
 // we can handle async actions here
 export const cartActions = (dispatch: React.Dispatch<Actions>) => ({
-  // set items
-  setItems: (items: CartMap) => dispatch(setItems(items)),
+  // set state
+  setInitialState: (state: CartState) => dispatch(setInitialState(state)),
   // reset items
   resetItems: () => dispatch(resetItems()),
   // add item

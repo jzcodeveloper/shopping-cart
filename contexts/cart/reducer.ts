@@ -7,9 +7,8 @@ import { addCartItem } from "./utils";
 export const cartReducer = (state: CartState, action: Actions) =>
   produce<CartState>(state, (draft: Draft<CartState>) => {
     switch (action.type) {
-      case CART_ACTIONS.SET_ITEMS: {
-        draft.items = action.payload;
-        break;
+      case CART_ACTIONS.SET_INITIAL_STATE: {
+        return action.payload;
       }
 
       case CART_ACTIONS.RESET_ITEMS: {

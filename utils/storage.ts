@@ -12,7 +12,7 @@ export const getItem = <T>(key: string): T => {
  * @param {T} value
  * @returns {void}
  */
-export const setItem = <T>(key: string, value: T) => {    
+export const setItem = <T>(key: string, value: T) => {
   if (!value) return;
   localStorage.setItem(key, JSON.stringify(value));
 };
