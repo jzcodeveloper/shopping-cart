@@ -4,7 +4,7 @@ import { Product } from "../../contexts/cart/types";
 
 export const getProducts = async (): Promise<Product[]> => {
   try {
-    const res = await api.get<Product[]>("/");
+    const res = await api.get<Product[]>("/products");
     return res.data;
   } catch (error) {
     const axiosError = error as AxiosError;
