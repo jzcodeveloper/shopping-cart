@@ -29,7 +29,7 @@ yarn install
 ### Configure environment variables
 
 ```
-NEXT_PUBLIC_API_URL=https://products-api-meru.vercel.app/api/products
+NEXT_PUBLIC_API_URL=https://products-api-meru.vercel.app/api
 ```
 
 ### Run locally for development
