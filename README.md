@@ -4,7 +4,7 @@
 
 > An e-commerce application
 
-[Shopping Cart](https://example.com) is an e-commerce application where you can browse a list of products and add them to your cart.
+[Shopping Cart](https://shopping-cart-eosin-eight.vercel.app) is an e-commerce application where you can browse a list of products and add them to your cart.
 
 ## Quick Start
 
@@ -24,6 +24,12 @@ Install required modules by executing
 npm install
 # or
 yarn install
+```
+
+### Configure environment variables
+
+```
+NEXT_PUBLIC_API_URL=https://products-api-meru.vercel.app/api/products
 ```
 
 ### Run locally for development
