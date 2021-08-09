@@ -1,9 +1,24 @@
-import { CartState } from "./types";
+import { CartState, CartContext } from "./types";
+import { CartActions } from "./actions";
 
 export const INITIAL_STATE = Object.freeze<CartState>({
   items: {},
   expanded: false,
 });
+
+export const INITIAL_ACTIONS = Object.freeze<CartActions>({
+  setInitialState: () => {},
+  addItem: () => {},
+  removeItem: () => {},
+  clearItem: () => {},
+  clearItems: () => {},
+  toggleCart: () => {},
+});
+
+export const INITIAL_CONTEXT = Object.freeze<CartContext>([
+  INITIAL_STATE,
+  INITIAL_ACTIONS,
+]);
 
 export const CART_ACTIONS = Object.freeze<Record<string, string>>({
   SET_INITIAL_STATE: "SET_INITIAL_STATE",

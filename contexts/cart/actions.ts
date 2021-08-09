@@ -68,3 +68,4 @@ export const cartActions = (dispatch: React.Dispatch<ActionPayload>) => ({
   // toggle cart
   toggleCart: () => dispatch(toggleCart()),
 });
+export type CartActions = ReturnType<typeof cartActions>;

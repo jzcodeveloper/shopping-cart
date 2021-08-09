@@ -1,4 +1,5 @@
 import { EmptyObject } from "../../@types";
+import { CartActions } from "./actions";
 
 export interface Product {
   id: number;
@@ -19,3 +20,5 @@ export interface CartState {
   items: CartMap | EmptyObject;
   expanded: boolean;
 }
+
+export type CartContext = Readonly<[CartState, CartActions]>;
