@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { CartMap, CartItem } from "../../../contexts/cart/types";
-import CartListItem from "../../cart-item";
+import { CartMap, CartItem } from "../../contexts/cart/types";
+import CartListItem from "../cart-item";
 
 interface Props {
   items: CartMap;

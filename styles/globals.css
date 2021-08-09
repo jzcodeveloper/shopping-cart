@@ -19,31 +19,13 @@ a {
 @tailwind components;
 @tailwind utilities;
 
-.zoom-in {
-  animation: zoom-in-animation 0.25s ease-in-out forwards;
-}
-
-.zoom-out {
-  animation: zoom-out-animation 0.25s ease-in-out forwards;
-}
-
-@keyframes zoom-in-animation {
-  from {
-    transform: scale(0);
-    opacity: 0;
-  }
-  to {
+@layer utilities {
+  .zoom-in {
     transform: scale(1);
     opacity: 1;
   }
-}
 
-@keyframes zoom-out-animation {
-  from {
-    transform: scale(1);
-    opacity: 1;
-  }
-  to {
+  .zoom-out {
     transform: scale(0);
     opacity: 0;
   }
