@@ -4,7 +4,7 @@
 
 > An e-commerce application
 
-[Shopping Cart](https://shopping-cart-murex-nine.vercel.app) is an e-commerce application where you can browse a list of products and add them to your cart.
+[Shopping Cart](https://shopping-cart-jzcoding.vercel.app) is an e-commerce application where you can browse a list of products and add them to your cart.
 
 ## Quick Start
 
