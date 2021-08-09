@@ -28,7 +28,7 @@ yarn install
 
 ### Configure environment variables
 
-Create a .env.local file
+Create a `.env.local` file
 
 ```
 NEXT_PUBLIC_API_URL=https://products-api-meru.vercel.app/api
