@@ -6,7 +6,7 @@ import {
   selectCartExpanded,
 } from "../../contexts/cart/selectors";
 import { useCartSelector } from "../../contexts/cart";
-import CartItems from "../icons/cart-items";
+import CartItems from "../cart-items";
 
 function Cart() {
   const items = useCartSelector(selectCartItems);
@@ -15,7 +15,7 @@ function Cart() {
   return (
     <div
       className={classNames(
-        "absolute top-16 right-6 left-6 flex flex-col justify-between sm:left-auto w-auto sm:w-80 h-96 border border-indigo-800 shadow-lg bg-white z-10 p-5 rounded origin-top-right transform scale-0",
+        "absolute top-16 right-6 left-6 flex flex-col justify-between sm:left-auto w-auto sm:w-80 h-96 border border-indigo-800 shadow-lg bg-white z-10 p-5 rounded origin-top-right transform transition",
         { "zoom-in": expanded, "zoom-out": !expanded }
       )}
     >
