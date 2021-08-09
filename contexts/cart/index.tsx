@@ -1,11 +1,11 @@
 import React, { useEffect, useContext, useReducer, useMemo } from "react";
 import { cartActions } from "./actions";
 import * as storage from "../../utils/storage";
-import { CartState, CartContext } from "./types";
+import { CartState, ICartContext } from "./types";
 import { cartReducer } from "./reducer";
 import { INITIAL_STATE, INITIAL_CONTEXT, STORAGE_KEY } from "./values";
 
-const CartContext = React.createContext<CartContext>(INITIAL_CONTEXT);
+const CartContext = React.createContext<ICartContext>(INITIAL_CONTEXT);
 
 interface Props {
   children: React.ReactNode;
@@ -18,7 +18,7 @@ export const CartProvider = ({ children }: Props) => {
   const value = useMemo(() => [state, actions], [
     state,
     actions,
-  ]) as CartContext;
+  ]) as ICartContext;
 
   useEffect(() => {
     // save to local storage before unload

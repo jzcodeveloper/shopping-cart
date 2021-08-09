@@ -1,4 +1,4 @@
-import { CartState, CartContext } from "./types";
+import { CartState, ICartContext } from "./types";
 import { CartActions } from "./actions";
 
 export const INITIAL_STATE = Object.freeze<CartState>({
@@ -15,7 +15,7 @@ export const INITIAL_ACTIONS = Object.freeze<CartActions>({
   toggleCart: () => {},
 });
 
-export const INITIAL_CONTEXT = Object.freeze<CartContext>([
+export const INITIAL_CONTEXT = Object.freeze<ICartContext>([
   INITIAL_STATE,
   INITIAL_ACTIONS,
 ]);

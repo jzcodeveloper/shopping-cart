@@ -21,4 +21,4 @@ export interface CartState {
   expanded: boolean;
 }
 
-export type CartContext = Readonly<[CartState, CartActions]>;
+export type ICartContext = Readonly<[CartState, CartActions]>;
